@@ -33,7 +33,7 @@ function SignUp() {
 
             const provider = new GoogleAuthProvider();
 
-            const result = await signInWithPopup(auth, provider);
+            await signInWithPopup(auth, provider);
 
             navigate("/");
         } catch (error) {
