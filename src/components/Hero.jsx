@@ -3,7 +3,6 @@ import { motion } from "motion/react";
 
 import {
     ArrowRight,
-    Sparkles,
     Search,
     MapPin,
     CreditCard,
