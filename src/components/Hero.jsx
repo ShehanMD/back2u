@@ -1,5 +1,7 @@
 
 import { motion } from "motion/react";
+import { useNavigate } from "react-router";
+
 
 import {
     ArrowRight,
@@ -36,7 +38,10 @@ const sampleItems = [
 ];
 
 function Hero() {
+    const navigate = useNavigate();
+
     return (
+
         <main>
 
             {/* Hero Section */}
@@ -85,12 +90,14 @@ function Hero() {
                         <div className="mt-9 flex flex-wrap items-center gap-4">
 
                             {/* Lost Item Button */}
-                            <motion.a
-                                href="#report-lost"
+                            {/* Lost Item Button */}
+                            <motion.button
+                                type="button"
+                                onClick={() => navigate("/create-post/lost")}
                                 whileHover={{ scale: 1.04, y: -3 }}
                                 whileTap={{ scale: 0.96 }}
                                 transition={{ duration: 0.2, ease: "easeOut" }}
-                                className="group inline-flex items-center gap-3 rounded-full bg-red-500 px-6 py-4 text-sm font-bold text-white shadow-lg shadow-red-500/20 transition-colors duration-200 hover:bg-red-600"
+                                className="group inline-flex cursor-pointer items-center gap-3 rounded-full border-0 bg-red-500 px-6 py-4 text-sm font-bold text-white shadow-lg shadow-red-500/20 transition-colors duration-200 hover:bg-red-600"
                             >
                                 <PackagePlus size={19} />
 
@@ -100,15 +107,16 @@ function Hero() {
                                     size={18}
                                     className="transition-transform duration-200 group-hover:translate-x-1"
                                 />
-                            </motion.a>
+                            </motion.button>
 
                             {/* Found Item Button */}
-                            <motion.a
-                                href="#report-found"
+                            <motion.button
+                                type="button"
+                                onClick={() => navigate("/create-post/found")}
                                 whileHover={{ scale: 1.04, y: -3 }}
                                 whileTap={{ scale: 0.96 }}
                                 transition={{ duration: 0.2, ease: "easeOut" }}
-                                className="group inline-flex items-center gap-3 rounded-full bg-lime-300 px-6 py-4 text-sm font-bold text-slate-950 shadow-lg shadow-lime-500/20 transition-colors duration-200 hover:bg-lime-400"
+                                className="group inline-flex cursor-pointer items-center gap-3 rounded-full border-0 bg-lime-300 px-6 py-4 text-sm font-bold text-slate-950 shadow-lg shadow-lime-500/20 transition-colors duration-200 hover:bg-lime-400"
                             >
                                 <PackageCheck size={19} />
 
@@ -118,7 +126,7 @@ function Hero() {
                                     size={18}
                                     className="transition-transform duration-200 group-hover:translate-x-1"
                                 />
-                            </motion.a>
+                            </motion.button>
 
                         </div>
 
@@ -204,8 +212,8 @@ function Hero() {
                                                 {/* Item Icon */}
                                                 <div
                                                     className={`grid h-11 w-11 shrink-0 place-items-center rounded-2xl ${item.type === "FOUND"
-                                                            ? "bg-lime-100 text-lime-700"
-                                                            : "bg-indigo-50 text-indigo-600"
+                                                        ? "bg-lime-100 text-lime-700"
+                                                        : "bg-indigo-50 text-indigo-600"
                                                         }`}
                                                 >
                                                     <ItemIcon size={20} />
@@ -226,8 +234,8 @@ function Hero() {
                                                 {/* Lost / Found Label */}
                                                 <span
                                                     className={`rounded-full px-2.5 py-1.5 text-[10px] font-black tracking-wide ${item.type === "FOUND"
-                                                            ? "bg-lime-100 text-lime-800"
-                                                            : "bg-indigo-50 text-indigo-700"
+                                                        ? "bg-lime-100 text-lime-800"
+                                                        : "bg-indigo-50 text-indigo-700"
                                                         }`}
                                                 >
                                                     {item.type}
