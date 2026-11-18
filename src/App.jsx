@@ -9,6 +9,7 @@ import ItemsPage from "./pages/ItemsPage";
 import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
 import CreatePost from "./pages/CreatePost";
+import MyPosts from "./pages/MyPosts";
 
 function App() {
   // Get the current URL location
@@ -46,6 +47,11 @@ function App() {
             <Route
               path="/items"
               element={<ItemsPage />}
+            />
+
+            <Route
+              path="/my-posts"
+              element={<MyPosts />}
             />
 
             {/* Authentication Pages */}

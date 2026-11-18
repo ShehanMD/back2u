@@ -3,7 +3,6 @@ name: Back2U CI
 
 on:
   push:
-    branches: [main]
 
   pull_request:
     branches: [main]

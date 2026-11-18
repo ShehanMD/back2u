@@ -69,9 +69,9 @@ function Hero() {
 
                         {/* Main Heading */}
                         <h1 className="max-w-2xl text-2xl font-black leading-[1.12] tracking-tight text-slate-950 sm:text-6xl lg:text-5xl">
-                            Lost something
+                            Lost something?
                             <br />
-                            on campus?
+                            
 
                             <span className="mt-2 block text-lime-500 lg:text-7xl">
                                 Let's bring it Back2U.
