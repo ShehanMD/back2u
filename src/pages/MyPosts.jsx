@@ -75,8 +75,6 @@ function MyPosts() {
   // Load only the posts created by the logged-in user
   useEffect(() => {
     if (!user) {
-      setItems([]);
-      setIsLoading(false);
       return;
     }
 
