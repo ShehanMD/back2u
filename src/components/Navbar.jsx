@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "motion/react";
 import defaultUser from "../assets/user.png";
 import {
   ArrowUpRight,
-  UserRound,
+  ClipboardList,
   ChevronDown,
   LogOut,
 } from "lucide-react";
@@ -17,6 +17,7 @@ const navLinks = [
   { label: "Home", to: "/" },
   { label: "Lost & Found", to: "/items" },
   { label: "How it works", to: "/#how-it-works" },
+  { label: "About us", to: "/#about-us" },
 ];
 
 function Navbar() {
@@ -159,12 +160,12 @@ function Navbar() {
                         className="absolute right-0 mt-3 w-52 overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 shadow-xl shadow-slate-900/10"
                       >
                         <Link
-                          to="/profile"
+                          to="/my-posts"
                           onClick={() => setMenuOpen(false)}
                           className="flex items-center gap-3 rounded-xl px-3 py-3 text-sm font-medium text-slate-700 transition-colors hover:bg-lime-50 hover:text-slate-950"
                         >
-                          <UserRound size={18} />
-                          Your Profile
+                          <ClipboardList size={18} />
+                          My Posts
                         </Link>
 
                         <div className="my-1 border-t border-slate-100" />
